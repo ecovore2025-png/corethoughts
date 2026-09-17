@@ -5,7 +5,7 @@ import InteractiveDemo from './components/InteractiveDemo';
 import AnalysisSection from './components/AnalysisSection';
 import QuadrantVisualization from './components/QuadrantVisualization';
 import MathDemo from './components/MathDemo';
-import HonestExperiment from './components/HonestExperiment';
+import MetaFrameworkExperiment from './components/MetaFrameworkExperiment';
 
 type Tab = 'overview' | 'formalism' | 'demo' | 'mathdemo' | 'quadrant' | 'experiment' | 'analysis';
 
@@ -65,7 +65,7 @@ export default function App() {
         {activeTab === 'demo' && <InteractiveDemo />}
         {activeTab === 'mathdemo' && <MathDemo />}
         {activeTab === 'quadrant' && <QuadrantVisualization />}
-        {activeTab === 'experiment' && <HonestExperiment />}
+        {activeTab === 'experiment' && <MetaFrameworkExperiment />}
         {activeTab === 'analysis' && <AnalysisSection />}
       </main>
 
