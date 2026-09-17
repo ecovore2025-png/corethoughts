@@ -5,8 +5,9 @@ import InteractiveDemo from './components/InteractiveDemo';
 import AnalysisSection from './components/AnalysisSection';
 import QuadrantVisualization from './components/QuadrantVisualization';
 import MathDemo from './components/MathDemo';
+import ExperimentalValidation from './components/ExperimentalValidation';
 
-type Tab = 'overview' | 'formalism' | 'demo' | 'mathdemo' | 'quadrant' | 'analysis';
+type Tab = 'overview' | 'formalism' | 'demo' | 'mathdemo' | 'quadrant' | 'analysis' | 'experiment';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<Tab>('overview');
@@ -17,6 +18,7 @@ export default function App() {
     { id: 'demo', label: '系统模拟', icon: '🔬' },
     { id: 'mathdemo', label: '数学机制', icon: '🧮' },
     { id: 'quadrant', label: '四象限模型', icon: '📊' },
+    { id: 'experiment', label: '经验验证', icon: '🧪' },
     { id: 'analysis', label: '优劣分析', icon: '⚖️' },
   ];
 
@@ -63,6 +65,7 @@ export default function App() {
         {activeTab === 'demo' && <InteractiveDemo />}
         {activeTab === 'mathdemo' && <MathDemo />}
         {activeTab === 'quadrant' && <QuadrantVisualization />}
+        {activeTab === 'experiment' && <ExperimentalValidation />}
         {activeTab === 'analysis' && <AnalysisSection />}
       </main>
 
